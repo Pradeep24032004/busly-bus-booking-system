@@ -1,0 +1,133 @@
+/* Wrapper */
+.seatmap-wrapper {
+  max-width: 500px;
+  margin: 0 auto;
+  font-family: sans-serif;
+}
+
+/* Legend */
+.seatmap-legend {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.seat-demo {
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.seat-demo.available { background-color: #f0f0f0; }
+.seat-demo.selected { background-color: #4caf50; }
+.seat-demo.reserved { background-color: #ff9800; }
+.seat-demo.booked { background-color: #f44336; }
+
+/* Bus front (Driver area) */
+.bus-front {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.driver-section {
+  background: #333;
+  color: #fff;
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+/* Main seat map */
+.seatmap {
+  display: flex;
+  justify-content: center;
+}
+
+/* Rows container */
+.seat-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* space between rows */
+}
+
+/* Each row */
+.seat-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px; /* aisle width */
+}
+
+/* Left & Right seat groups (2 seats each) */
+.seat-row-left,
+.seat-row-right {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px; /* space between seats in same side */
+}
+
+/* Aisle line */
+.aisle {
+  width: 25px;
+  display: flex;
+  justify-content: center;
+}
+
+.aisle-line {
+  width: 2px;
+  background: #ccc;
+  height: 100%;
+  border-radius: 2px;
+}
+
+/* Seat styles */
+.seat {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #999;
+  border-radius: 6px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.15s, background-color 0.15s;
+}
+
+.seat:hover:not(:disabled) {
+  transform: scale(1.08);
+}
+
+.seat:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.seat-number {
+  font-weight: bold;
+}
+
+/* Seat status colors */
+.seat.available { background-color: #f0f0f0; }
+.seat.selected { background-color: #4caf50; color: #fff; }
+.seat.reserved { background-color: #ff9800; color: #fff; }
+.seat.booked { background-color: #f44336; color: #fff; }
+
+/* Summary */
+.seatmap-summary {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-around;
+}

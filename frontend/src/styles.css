@@ -1,0 +1,141 @@
+:root {
+  --bg: #f6f7fb;
+  --card: #ffffff;
+  --accent: #2563eb;
+  --danger: #ef4444;
+  --muted: #6b7280;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: var(--bg);
+  color: #111827;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+.header {
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 20px;
+  border-bottom: 1px solid #e6e9ef;
+  align-items: center;
+}
+
+.brand {
+  font-weight: 700;
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.header-right .btn-link {
+  margin-left: 12px;
+  text-decoration: none;
+  color: var(--accent);
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.container {
+  max-width: 980px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+.card {
+  background: var(--card);
+  padding: 18px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
+  margin-bottom: 18px;
+}
+
+.auth-card {
+  max-width: 480px;
+  margin: 20px auto;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px 12px;
+  margin: 8px 0 12px;
+  border-radius: 6px;
+  border: 1px solid #e6e9ef;
+  box-sizing: border-box;
+}
+
+button.btn {
+  background: var(--accent);
+  color: white;
+  padding: 10px 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+button.btn:disabled { opacity: 0.7; }
+
+button.btn-secondary {
+  background: transparent;
+  color: var(--muted);
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #e6e9ef;
+  margin-left: 8px;
+}
+
+.btn-small {
+  display: inline-block;
+  padding: 6px 8px;
+  background: var(--accent);
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.bus-list { list-style: none; margin: 0; padding: 0; }
+.bus-item { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px dashed #eef2ff; align-items: center; }
+
+.error { color: var(--danger); margin-top: 8px; }
+.success { color: #059669; margin-top: 8px; }
+
+.actions { margin-top: 12px; }
+
+.passenger-row { display:flex; gap:8px; align-items:center; margin-bottom:8px; }
+.passenger-seat { width:60px; font-weight:600; }
+
+.mt { margin-top: 12px; }
+
+/* SeatMap styles */
+.seatmap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 12px 0;
+}
+.seat {
+  width: 60px;
+  height: 42px;
+  border-radius: 6px;
+  border: 1px solid #e6e9ef;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+}
+.seat.available { background: #f8fafc; color: #111827; }
+.seat.reserved { background: #fde68a; color: #92400e; cursor: not-allowed; }
+.seat.booked { background: #fca5a5; color: #7f1d1d; cursor: not-allowed; }
+.seat.selected { outline: 3px solid rgba(37,99,235,0.18); background: #2563eb; color: #fff; }
