@@ -67,3 +67,5 @@ User selects seats → Try to acquire locks
     Else:
         Release acquired locks
         Return "Seats already booked"
+
+<img width="976" height="920" alt="Image" src="https://github.com/user-attachments/assets/c6df82cb-d045-4edb-a931-f0cbe7cf4835" />
