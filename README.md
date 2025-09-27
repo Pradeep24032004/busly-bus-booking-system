@@ -56,6 +56,8 @@ The **heart of the system** lies in **seat reservation handling**. Multiple user
 Without locks, two users could **simultaneously book the same seat**, leading to **data inconsistency** and financial disputes. By using **threading + locking**, we guarantee **100% atomicity** and **isolation** of seat booking operations.  
 
 ---
+<img width="976" height="920" alt="Image" src="https://github.com/user-attachments/assets/c6df82cb-d045-4edb-a931-f0cbe7cf4835" />
+Here User 1 is trying to book seat 18 and User 2 sees that is being reserved. It involves threads no two users cannot book same seat simultaneously.
 
 ### 🔒 Pseudo Workflow of Locking  
 
@@ -68,4 +70,4 @@ User selects seats → Try to acquire locks
         Release acquired locks
         Return "Seats already booked"
 
-<img width="976" height="920" alt="Image" src="https://github.com/user-attachments/assets/c6df82cb-d045-4edb-a931-f0cbe7cf4835" />
+
